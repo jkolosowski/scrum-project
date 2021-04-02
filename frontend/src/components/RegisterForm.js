@@ -78,13 +78,15 @@ const RegisterForm = () => {
             imie.style.borderBottom = '1px solid #333'
         }
 
-        if (idAdmin.value === ""){
-            idAdmin.style.border = '2px solid #ff9999'
-            setWarning("* ID jest wymagane")
-            check = true
-        } else {
-            idAdmin.style.border = 'none'
-            idAdmin.style.borderBottom = '1px solid #333'
+        if (person === 'admin'){
+            if (idAdmin.value === ""){
+                idAdmin.style.border = '2px solid #ff9999'
+                setWarning("* ID jest wymagane")
+                check = true
+            } else {
+                idAdmin.style.border = 'none'
+                idAdmin.style.borderBottom = '1px solid #333'
+            }
         }
         
         if (!check){
