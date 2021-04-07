@@ -5,11 +5,10 @@ const initialState = {
 };
 
 
-const profile = (state= initialState, action) => {
+const profile = (state = initialState, action) => {
     switch(action.type) {
         case LOG_IN:
             return {
-                ...state,
                 profile: {...state.profile, ...action.payload}
             }
         case LOG_OUT:
