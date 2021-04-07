@@ -8,6 +8,7 @@ const polls = require('./routes/polls');
 
 app.use(express.json());
 app.use(cors());
+
 app.use('/users', users);
 users.use('/:userId/poll', polls);
 
