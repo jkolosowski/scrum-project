@@ -109,6 +109,11 @@ const Database = ({user, dispatch}) => {
         dispatch(actions.updateUser(readyInfo))
         setFind(false)
     }
+
+    const deleteUser = () => {
+        dispatch(actions.deleteUser(user.pesel))
+        setFind(false)
+    }
     
     return (
         <div>
@@ -125,6 +130,7 @@ const Database = ({user, dispatch}) => {
             (
                 <div>
                     <PollInputs user={user} sendInfo={sendUpdate} />
+                    <input type="button" value="Usuń użytkownika" onClick={deleteUser} />
                 </div>
             )}
         </div>

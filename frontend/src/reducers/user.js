@@ -1,4 +1,4 @@
-import {FIND_USER, SEND_UPDATE} from "../actions/actionTypes";
+import {FIND_USER, SEND_UPDATE, DELETE_USER} from "../actions/actionTypes";
 
 const initialState = {
     user: {
@@ -55,6 +55,10 @@ const user = (state = initialState, action) => {
                 user: {...state.user, ...action.payload}
             }
         case SEND_UPDATE:
+            return {
+                ...state, ...initialState
+            }
+        case DELETE_USER:
             return {
                 ...state, ...initialState
             }

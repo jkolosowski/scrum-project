@@ -44,3 +44,10 @@ export const updateUser = (update) => {
         payload: update
     }
 }
+
+export const deleteUser = (pesel) => {
+    return {
+        type: actions.DELETE_USER,
+        payload: pesel
+    }
+}
