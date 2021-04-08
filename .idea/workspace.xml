@@ -7,6 +7,8 @@
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/actionCreators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/LogInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/LogInForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PollInputs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PollInputs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Polls.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Polls.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
