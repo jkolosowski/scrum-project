@@ -171,7 +171,7 @@ router.patch('/patch', async (req, res) => {
         sumalat=sumalat+wiek
     }
     sumalat=sumalat/x
-    console.log(sumalat)
+   
     return res.json(sumalat);
   });
 
