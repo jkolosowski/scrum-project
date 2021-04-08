@@ -63,4 +63,39 @@ router.post('/login', async (req, res) => {
     }
 });
 
+router.get('/getByPESEL', async (req, res) => {
+    const pesel = req.body.pesel;
+
+    const foundUser = await User.findOne({ pesel: pesel });
+
+    if (foundUser) {
+        const foundPoll = await Poll.findOne({ pesel: pesel });
+        if (foundPoll) {
+            res.json({
+                poll: foundPoll
+            });
+        } else {
+            res.json({
+                poll: foundPoll
+            });
+        }
+    } else {
+        res.json({
+            poll: {}
+        });
+    }
+});
+
+router.delete('/deleteByPESEL', async (req, res) => {
+    const pesel = req.body.pesel;
+
+    User.findOneAndDelete({ pesel: pesel }).then(()=>{
+        Poll.findOneAndDelete({ pesel: pesel }).then(()=>{
+            res.send("Success")
+        })
+        .catch(err=>{console.log(err); res.send(err)})
+    })
+    .catch(err=>{console.log(err); res.send(err)});
+});
+
 module.exports = router;
