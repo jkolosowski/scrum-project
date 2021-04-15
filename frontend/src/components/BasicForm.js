@@ -95,6 +95,15 @@ const BasicForm = ({user, nextPage, profile, poll, dispatch, setInput}) => {
 
                 <div className={"column is-centered mx-5 is-5"}>
                     <div>
+                        <p className={"label"}>Czy mieszkasz w polsce tymczasowo?</p>
+                    </div>
+                    <div className={"checkbox"}>
+                        <input className={"checkbox is-primary"} type="checkbox" name='residence' defaultChecked={user.residence === "Tymczasowy meldunek" ? true : false} onChange={(ev) => setInput({...user, residence: ev.target.checked})}/> Tak
+                    </div>
+                </div>
+
+                <div className={"column is-centered mx-5 is-5"}>
+                    <div>
                         <p className={"label"}>Czy jesteś niepełnosprawny?</p>
                     </div>
                     <div className={"checkbox"}>
