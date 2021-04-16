@@ -30,7 +30,7 @@ const WorkplaceForm = ({user, previousPage, profile, poll, alerts, dispatch, del
     const [apartment_number, setApartment] = useState(poll.workplace.address.apartment_number);
     const [postal_code, setPostalCode] = useState(poll.workplace.address.postal_code);
 
-    const [updated, setUpdated] = useState(false);
+    const [buttonClicked, setButtonClicked] = useState(false);
     const [checked, setChecked] = useState(false);
 
 
@@ -50,9 +50,11 @@ const WorkplaceForm = ({user, previousPage, profile, poll, alerts, dispatch, del
             if (res.data.length===0) { // if there is no poll for this pesel
                 sendInfo();
                 alert(`Ankieta wysłana poprawnie`);
+                setButtonClicked(false);
             }
             else {
                 alert(`Ankieta na podany pesel już istnieje`);
+                setButtonClicked(false);
             }
         }).catch(err => console.log(err))
     }
@@ -61,11 +63,19 @@ const WorkplaceForm = ({user, previousPage, profile, poll, alerts, dispatch, del
     useEffect(() => {
         console.log(poll);
         console.log('poll was updated');
-        if (updated && !checked) {
+        // if (updated && !checked) {
+            // checkIfPollsExistsAndDisplayAlerts();
+        // }
+
+    }, [poll]);
+    // }, [poll, updated, checked]);
+
+
+    useEffect(() => {
+        if (buttonClicked) {
             checkIfPollsExistsAndDisplayAlerts();
         }
-
-    }, [poll, updated, checked]);
+    }, [buttonClicked])
 
 
     const updatePoll = () => {
@@ -94,7 +104,7 @@ const WorkplaceForm = ({user, previousPage, profile, poll, alerts, dispatch, del
             }
         }
          dispatch(actions.setInfo(info)); // update redux poll 
-         setUpdated(true);
+         setButtonClicked(true);
     }
 
 
