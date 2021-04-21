@@ -78,9 +78,137 @@ const AddressForm = ({previousPage, nextPage, dispatch, voivodeships, poll}) => 
                         <div>
                             <p className={"label"}>W jakim powiacie mieszkałeś/aś?</p>
                         </div>
-                        <input className={"input is-info"} type="text" name='districtHousehold' value={district} placeholder={"Powiat"}
-                        onChange={(ev) => setDistrict(ev.target.value)}
-                        />
+
+                        {voivodeship === "Dolnośląskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Dolnośląskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Kujawsko-pomorskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Kujawsko-pomorskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Lubelskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Lubelskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Lubuskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Lubuskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Łódzkie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Łódzkie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Małopolskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Małopolskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Mazowieckie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Mazowieckie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Opolskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Mazowieckie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Podkarpackie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Podkarpackie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Podlaskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Podlaskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Pomorskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Pomorskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Śląskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Śląskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Świętokrzyskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Świętokrzyskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Warmińsko-mazurskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Warmińsko-mazurskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Wielkopolskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Wielkopolskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                        {voivodeship === "Zachodniopomorskie"? 
+                        (<div className="field is-narrow">
+                            <div className="select">
+                                <select name='districtHousehold' value={district} onChange={(ev) => setDistrict(ev.target.value)}>
+                                    {voivodeships.filter(v => v.voivodeship === "Zachodniopomorskie")[0].districts.map(d => (<option value={d.district}>{d.district}</option>))}
+                                </select>
+                            </div>
+                        </div>):null}
+                    
+                        
                     </div>
 
                     <div className={"column is-centered mx-5 is-5"}>
