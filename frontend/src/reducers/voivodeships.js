@@ -148,7 +148,6 @@ const initialState = {
                 }, 
                 
             ]
-
         },
         {
             voivodeship: "Lubelskie",
@@ -212,8 +211,8 @@ const initialState = {
                 }, 
                 {
                     district: "zamojski"
-                }]
-
+                }
+            ]
         },
         {
             voivodeship: "Lubuskie",
@@ -397,7 +396,6 @@ const initialState = {
                     district: "wielicki"
                 }, 
             ]
-
         },
         {
             voivodeship: "Mazowieckie",
@@ -796,10 +794,6 @@ const initialState = {
                     district: "żywiecki"
                 }, 
             ]
-
-
-
-
         },
 
         {
@@ -847,9 +841,6 @@ const initialState = {
             ]
 
         },
-
-
-   
 
         {
             voivodeship: "Warmińsko-mazurskie",
@@ -1014,7 +1005,6 @@ const initialState = {
                     district: "złotowski"
                 },
             ]
-
         },
         {
             voivodeship: "Zachodniopomorskie",
@@ -1078,8 +1068,6 @@ const initialState = {
         }
     
     ]
-  
-
 };
 
 
